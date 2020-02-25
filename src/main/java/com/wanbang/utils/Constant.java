@@ -1,4 +1,4 @@
-package io.renren.utils;
+package com.wanbang.utils;
 
 /**
  * 常量

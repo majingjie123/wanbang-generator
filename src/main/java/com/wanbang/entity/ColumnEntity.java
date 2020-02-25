@@ -1,4 +1,4 @@
-package io.renren.entity;
+package com.wanbang.entity;
 
 /**
  * 列的属性
@@ -23,6 +23,10 @@ public class ColumnEntity {
     private String attrType;
     //auto_increment
     private String extra;
+    //set方法
+    private String Method;
+    //get方法
+    private String getMethod;
     
 	public String getColumnName() {
 		return columnName;
@@ -65,5 +69,22 @@ public class ColumnEntity {
 	}
 	public void setExtra(String extra) {
 		this.extra = extra;
+	}
+
+
+	public String getMethod() {
+		return Method;
+	}
+
+	public void setMethod(String method) {
+		Method = method;
+	}
+
+	public String getGetMethod() {
+		return getMethod;
+	}
+
+	public void setGetMethod(String getMethod) {
+		this.getMethod = getMethod;
 	}
 }

@@ -14,7 +14,7 @@
  * the License.
  */
 
-package io.renren.dao;
+package com.wanbang.dao;
 
 import java.util.List;
 import java.util.Map;

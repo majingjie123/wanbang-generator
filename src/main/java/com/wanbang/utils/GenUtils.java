@@ -1,7 +1,7 @@
-package io.renren.utils;
+package com.wanbang.utils;
 
-import io.renren.entity.ColumnEntity;
-import io.renren.entity.TableEntity;
+import com.wanbang.entity.ColumnEntity;
+import com.wanbang.entity.TableEntity;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
@@ -75,6 +75,8 @@ public class GenUtils {
             columnEntity.setAttrName(attrName);
             columnEntity.setAttrname(StringUtils.uncapitalize(attrName));
 
+            columnEntity.setMethod(GeneratorStringUtils.firstUpperNoFormat(attrName));
+            columnEntity.setGetMethod(GeneratorStringUtils.firstUpperNoFormat(attrName));
             //列的数据类型，转换成Java类型
             String attrType = config.getString(columnEntity.getDataType(), "unknowType" );
             columnEntity.setAttrType(attrType);
@@ -180,11 +182,11 @@ public class GenUtils {
         }
 
         if (template.contains("Entity.java.vm" )) {
-            return packagePath + "entity" + File.separator + className + "Entity.java";
+            return packagePath + "entity" + File.separator + className + ".java";
         }
 
         if (template.contains("Dao.java.vm" )) {
-            return packagePath + "dao" + File.separator + className + "Dao.java";
+            return packagePath + "dao" + File.separator + className + "Mapper.java";
         }
 
         if (template.contains("Service.java.vm" )) {
@@ -200,7 +202,7 @@ public class GenUtils {
         }
 
         if (template.contains("Dao.xml.vm" )) {
-            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Mapper.xml";
         }
 
         if (template.contains("menu.sql.vm" )) {

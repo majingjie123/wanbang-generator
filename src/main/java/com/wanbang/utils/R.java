@@ -1,4 +1,4 @@
-package io.renren.utils;
+package com.wanbang.utils;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package io.renren.entity;
+package com.wanbang.entity;
 
 import java.util.List;
 

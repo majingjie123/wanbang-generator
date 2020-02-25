@@ -1,4 +1,4 @@
-package io.renren.dao;
+package com.wanbang.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 

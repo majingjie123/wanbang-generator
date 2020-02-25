@@ -6,12 +6,12 @@
  * 版权所有，侵权必究！
  */
 
-package io.renren.controller;
+package com.wanbang.controller;
 
-import io.renren.service.SysGeneratorService;
-import io.renren.utils.PageUtils;
-import io.renren.utils.Query;
-import io.renren.utils.R;
+import com.wanbang.service.SysGeneratorService;
+import com.wanbang.utils.PageUtils;
+import com.wanbang.utils.Query;
+import com.wanbang.utils.R;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,7 +53,7 @@ public class SysGeneratorController {
 		byte[] data = sysGeneratorService.generatorCode(tables.split(","));
 		
 		response.reset();  
-        response.setHeader("Content-Disposition", "attachment; filename=\"renren.zip\"");  
+        response.setHeader("Content-Disposition", "attachment; filename=\"wanbang.zip\"");
         response.addHeader("Content-Length", "" + data.length);  
         response.setContentType("application/octet-stream; charset=UTF-8");  
   
